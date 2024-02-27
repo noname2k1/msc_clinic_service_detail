@@ -92,6 +92,10 @@
   line-height: 120%; /* 1.2rem */
   letter-spacing: 0.0125rem;
 }
+.first-section header.header-wrapper .menu-right .instruct:hover {
+  background-color: var(--SECONDARY-blue-200);
+  transition: background-color 0.2s linear;
+}
 .first-section header.header-wrapper .menu-right .order {
   display: flex;
   height: 2.5rem;
@@ -111,6 +115,10 @@
   font-weight: 600;
   line-height: 120%; /* 1.2rem */
   letter-spacing: 0.0125rem;
+}
+.first-section header.header-wrapper .menu-right .order:hover {
+  background-color: var(--PRIMARY-blue-700);
+  transition: background-color 0.2s linear;
 }
 .first-section header.header-wrapper .menu-right .users {
   display: flex;
@@ -140,10 +148,27 @@
 }
 .first-section header.header-wrapper ul.navigation li {
   display: flex;
-  height: 2.5rem;
+  padding-bottom: 0.1rem;
   justify-content: center;
   align-items: center;
   gap: 0.25rem;
+  position: relative;
+}
+.first-section header.header-wrapper ul.navigation li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.06rem;
+  background-color: var(--PRIMARY-blue-700);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+.first-section header.header-wrapper ul.navigation li:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 .first-section header.header-wrapper ul.navigation a {
   text-decoration: none;
@@ -700,6 +725,7 @@
   height: 100%;
 }
 .sixth-section .slide-wrapper .swiper-1 .patient-photo-wrapper .play-image {
+  cursor: pointer;
   width: 3.38344rem;
   height: 3.38344rem;
   flex-shrink: 0;
@@ -840,6 +866,13 @@
   font-weight: 600;
   line-height: 120%; /* 1.2rem */
   letter-spacing: 0.0125rem;
+  transition: 0.2s;
+}
+.sixth-section .slide-wrapper .swiper-1 .button-wrapper .text:hover {
+  background: var(--SECONDARY-blue-400);
+}
+.sixth-section .slide-wrapper .swiper-1 .button-wrapper .text:active {
+  background: var(--SECONDARY-blue-500);
 }
 
 .seventh-section {
@@ -1021,6 +1054,7 @@
   letter-spacing: 0.0125rem;
   color: var(--PRIMARY-blue-500, #134a9b);
   text-align: center;
+  transition: 0.2s;
 }
 .seventh-section .content form .right-items .button-wrapper button.bg {
   color: var(--greyscaletext-0, #fff);
@@ -1029,6 +1063,14 @@
 }
 .seventh-section .content form .right-items .button-wrapper button span {
   white-space: nowrap;
+}
+.seventh-section .content form .right-items .button-wrapper button:hover {
+  border-color: var(--SECONDARY-blue-400);
+  background: var(--SECONDARY-blue-400);
+}
+.seventh-section .content form .right-items .button-wrapper button:active {
+  border-color: var(--SECONDARY-blue-500);
+  background: var(--SECONDARY-blue-500);
 }
 .seventh-section .content form .textarea-group {
   flex: 1;
