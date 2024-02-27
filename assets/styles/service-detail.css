@@ -143,7 +143,7 @@
   display: flex;
   width: 87.5rem;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   list-style: none;
 }
 .first-section header.header-wrapper ul.navigation li {
