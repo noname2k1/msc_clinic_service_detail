@@ -7,6 +7,7 @@
 }
 .first-section header.header-wrapper {
   display: flex;
+  transition: 0.4s ease-in;
   padding: 1.25rem 6.25rem 0.28125rem 6.25rem;
   flex-direction: column;
   justify-content: flex-end;
@@ -17,7 +18,7 @@
 }
 .first-section header.header-wrapper .header-top {
   display: flex;
-  width: 87.5rem;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.84375rem;
@@ -139,9 +140,12 @@
   align-items: center;
   flex-shrink: 0;
 }
+.first-section header.header-wrapper .header-nav {
+  width: 100%;
+}
 .first-section header.header-wrapper ul.navigation {
   display: flex;
-  width: 87.5rem;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.84375rem;
@@ -283,7 +287,6 @@
   padding-left: 3.54075rem;
   justify-content: flex-end;
   align-items: center;
-  gap: 5.8345rem;
   border-radius: 1.5rem;
   background: #f6faff;
 }
@@ -321,16 +324,18 @@
   width: 39.20288rem;
   height: 26.25rem;
   border-radius: 1.5rem;
+  margin-left: 5.8345rem;
 }
 .third-section .item-2 {
+  margin-top: 5.5rem;
   display: flex;
   height: 30.1875rem;
   padding-left: 3.54075rem;
   justify-content: flex-end;
   align-items: center;
-  gap: 5.8345rem;
   border-radius: 1.5rem;
   background: #f6faff;
+  padding-right: 4rem;
 }
 .third-section .item-2 div.wrapper {
   display: flex;
@@ -362,6 +367,7 @@
 }
 .third-section .item-2 div.wrapper div p {
   width: 33.88988rem;
+  margin-left: 0.625rem;
   height: 3rem;
   color: var(--PRIMARY-blue-700, #0d356e);
   text-align: justify;
@@ -380,17 +386,19 @@
   height: 30.1875rem;
   flex-shrink: 0;
   border-radius: 1.5rem;
+  margin-left: 5.8345rem;
 }
 
 .fourth-section {
   position: relative;
-  height: 76.875rem;
+  height: 80.875rem;
   flex-shrink: 0;
+  overflow: hidden;
   padding: 6.0625rem 6.28125rem 12.75rem 6.25rem;
   background: var(--PRIMARY-blue-500, #134a9b);
 }
 .fourth-section div {
-  width: 48.5rem;
+  width: 100%;
   height: 12.625rem;
   flex-shrink: 0;
 }
@@ -422,12 +430,19 @@
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
+  max-height: 40rem;
+  overflow-y: auto;
+  width: 100vw;
+  position: relative;
+  z-index: 1;
 }
 .fourth-section ul li {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.625rem;
+  padding: 0.88rem 0;
+  border-bottom: 0.0625rem solid rgba(231, 237, 245, 0.5);
   cursor: pointer;
 }
 .fourth-section ul li:hover p {
@@ -435,7 +450,7 @@
   transition: color 0.2s linear;
 }
 .fourth-section ul li:hover + .seperator {
-  background: var(--SECONDARY-blue-400);
+  background: var(--SECONDARY-blue-500);
 }
 .fourth-section ul li p {
   width: 33.88988rem;
@@ -452,11 +467,13 @@
   height: 0.0625rem;
   opacity: 0.3;
   background: #fff;
+  margin: 0.88rem 0;
 }
 .fourth-section .right-item {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 50rem;
+  width: 44.97438rem;
   padding: 0rem 2.90063rem 1.73069rem 1.0625rem;
   align-items: center;
 }
@@ -518,6 +535,7 @@
   align-items: flex-start;
 }
 .fifth-section .text ul li {
+  margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
 }
@@ -544,6 +562,7 @@
   letter-spacing: -0.01875rem;
 }
 .fifth-section .text ul li h3 {
+  margin-left: 1.5rem;
   width: 23.97rem;
   color: var(--PRIMARY-blue-500, #134a9b);
   text-align: justify;
@@ -562,7 +581,7 @@
 }
 .sixth-section header {
   display: flex;
-  width: 87.375rem;
+  width: 100%;
   justify-content: space-between;
   align-items: flex-end;
 }
@@ -618,7 +637,7 @@
 }
 .sixth-section .slide-wrapper {
   display: flex;
-  width: 87.375rem;
+  width: 100%;
   height: 39.5625rem;
   padding: 2.9375rem 0rem;
   justify-content: flex-end;
@@ -653,7 +672,6 @@
   flex-direction: column;
   width: 13.125rem;
   height: 24.64306rem;
-  gap: 1.66rem;
 }
 .sixth-section .slide-wrapper .swiper-1 .patient-photo-wrapper {
   width: 12.625rem;
@@ -693,7 +711,6 @@
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1rem;
 }
 .sixth-section .slide-wrapper .swiper-1 .patient-info img {
   display: flex;
@@ -953,9 +970,6 @@
   gap: 0.5rem;
   flex: 1 0 0;
 }
-.seventh-section .content form input:focus ~ .placeholder {
-  display: none;
-}
 .seventh-section .content form .left-items {
   display: flex;
   flex-direction: column;
@@ -1104,7 +1118,7 @@
 }
 .eighth-section header {
   display: flex;
-  width: 87.375rem;
+  width: 100%;
   justify-content: space-between;
   align-items: flex-end;
 }
@@ -1442,6 +1456,7 @@ section#features ul li img {
 
 .swiper-slide {
   padding: 0 !important;
+  display: flex;
 }
 
 button span.more {
@@ -1479,8 +1494,16 @@ button:hover span.more img.slip {
   transform: translateX(500%);
 }
 
+.date-wrapper,
+.custom-select {
+  cursor: pointer;
+}
 .date-wrapper img,
 .custom-select img {
   width: 1.25rem;
   height: 1.25rem;
+}
+
+.date-hidden {
+  display: none !important;
 }/*# sourceMappingURL=service-detail.css.map */

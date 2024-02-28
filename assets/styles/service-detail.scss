@@ -6,6 +6,7 @@
     left: 0;
     header.header-wrapper {
         display: flex;
+        transition: 0.4s ease-in;
         padding: 1.25rem 6.25rem 0.28125rem 6.25rem;
         flex-direction: column;
         justify-content: flex-end;
@@ -17,7 +18,7 @@
 
         .header-top {
             display: flex;
-            width: 87.5rem;
+            width: 100%;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 0.84375rem;
@@ -154,10 +155,13 @@
                 }
             }
         }
+        .header-nav {
+            width: 100%;
+        }
 
         ul.navigation {
             display: flex;
-            width: 87.5rem;
+            width: 100%;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 0.84375rem;
@@ -321,7 +325,6 @@
         padding-left: 3.54075rem;
         justify-content: flex-end;
         align-items: center;
-        gap: 5.8345rem;
         border-radius: 1.5rem;
         background: #f6faff;
         div {
@@ -359,17 +362,19 @@
             width: 39.20288rem;
             height: 26.25rem;
             border-radius: 1.5rem;
+            margin-left: 5.8345rem;
         }
     }
     .item-2 {
+        margin-top: 5.5rem;
         display: flex;
         height: 30.1875rem;
         padding-left: 3.54075rem;
         justify-content: flex-end;
         align-items: center;
-        gap: 5.8345rem;
         border-radius: 1.5rem;
         background: #f6faff;
+        padding-right: 4rem;
         div.wrapper {
             display: flex;
             width: 35.375rem;
@@ -399,6 +404,7 @@
                 // gap: 0.625rem;
                 p {
                     width: 33.88988rem;
+                    margin-left: 0.625rem;
                     height: 3rem;
                     color: var(--PRIMARY-blue-700, #0d356e);
                     text-align: justify;
@@ -422,18 +428,20 @@
             height: 30.1875rem;
             flex-shrink: 0;
             border-radius: 1.5rem;
+            margin-left: 5.8345rem;
         }
     }
 }
 
 .fourth-section {
     position: relative;
-    height: 76.875rem;
+    height: 80.875rem;
     flex-shrink: 0;
+    overflow: hidden;
     padding: 6.0625rem 6.28125rem 12.75rem 6.25rem;
     background: var(--PRIMARY-blue-500, #134a9b);
     div {
-        width: 48.5rem;
+        width: 100%;
         height: 12.625rem;
         flex-shrink: 0;
         p.title {
@@ -462,16 +470,25 @@
             }
         }
     }
+
     ul {
         display: inline-flex;
         flex-direction: column;
         align-items: flex-start;
+        max-height: 40rem;
+        overflow-y: auto;
+        width: calc(100vw);
+        position: relative;
+        z-index: 1;
         // gap: 0.5625rem;
+
         li {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 0.625rem;
+            padding: 0.88rem 0;
+            border-bottom: 0.0625rem solid rgba(231, 237, 245, 0.5);
             cursor: pointer;
             &:hover {
                 p {
@@ -479,7 +496,7 @@
                     transition: color 0.2s linear;
                 }
                 & + .seperator {
-                    background: var(--SECONDARY-blue-400);
+                    background: var(--SECONDARY-blue-500);
                 }
             }
             p {
@@ -498,13 +515,15 @@
                 height: 0.0625rem;
                 opacity: 0.3;
                 background: #fff;
+                margin: 0.88rem 0;
             }
         }
     }
     .right-item {
         position: absolute;
         top: 0;
-        right: 0;
+        left: 50rem;
+        width: 44.97438rem;
         padding: 0rem 2.90063rem 1.73069rem 1.0625rem;
         align-items: center;
         .img-wrapper {
@@ -569,6 +588,7 @@
             align-items: flex-start;
             // gap: 1.5rem;
             li {
+                margin-bottom: 1.5rem;
                 display: flex;
                 align-items: center;
                 // gap: 1.5rem;
@@ -596,6 +616,7 @@
                     }
                 }
                 h3 {
+                    margin-left: 1.5rem;
                     width: 23.97rem;
                     color: var(--PRIMARY-blue-500, #134a9b);
                     text-align: justify;
@@ -618,7 +639,7 @@
     padding-top: 6.06rem;
     header {
         display: flex;
-        width: 87.375rem;
+        width: 100%;
         justify-content: space-between;
         align-items: flex-end;
         .text {
@@ -680,7 +701,7 @@
     }
     .slide-wrapper {
         display: flex;
-        width: 87.375rem;
+        width: 100%;
         height: 39.5625rem;
         padding: 2.9375rem 0rem;
         justify-content: flex-end;
@@ -714,7 +735,7 @@
                 flex-direction: column;
                 width: 13.125rem;
                 height: 24.64306rem;
-                gap: 1.66rem;
+                // gap: 1.66rem;
             }
             .patient-photo-wrapper {
                 width: 12.625rem;
@@ -754,7 +775,7 @@
                 display: inline-flex;
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 1rem;
+                // gap: 1rem;
                 img {
                     display: flex;
                     width: 1.5rem;
@@ -1043,11 +1064,6 @@
                 flex: 1 0 0;
                 .placeholder {
                 }
-                &:focus {
-                    ~ .placeholder {
-                        display: none;
-                    }
-                }
             }
 
             .left-items {
@@ -1209,7 +1225,7 @@
     padding-top: 6.06rem;
     header {
         display: flex;
-        width: 87.375rem;
+        width: 100%;
         justify-content: space-between;
         align-items: flex-end;
         .text {
@@ -1584,6 +1600,7 @@ section#features {
 // override swiper
 .swiper-slide {
     padding: 0 !important;
+    display: flex;
 }
 
 button {
@@ -1630,8 +1647,13 @@ button {
 
 .date-wrapper,
 .custom-select {
+    cursor: pointer;
     img {
         width: 1.25rem;
         height: 1.25rem;
     }
+}
+
+.date-hidden {
+    display: none !important;
 }

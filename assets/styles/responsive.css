@@ -402,7 +402,7 @@
   }
   .fifth-section {
     overflow: hidden;
-    min-height: 160.8rem;
+    min-height: 166.8rem;
     flex-shrink: 0;
   }
   .fifth-section img.bg-pc {
@@ -425,6 +425,7 @@
     padding-bottom: 3.73rem;
     padding-top: 3.73rem;
     width: 100%;
+    margin-bottom: 0;
     border-bottom: 0.0625rem solid rgba(0, 34, 84, 0.12);
   }
   .fifth-section .text ul li:first-child {
@@ -564,12 +565,68 @@
   }
   .sixth-section .slide-wrapper .swiper-1 .patient-slide {
     flex-direction: column;
-    padding-left: 4.76rem;
-    padding-right: 4.76rem;
-    padding-top: 5.57rem;
+    width: 100%;
     border-radius: 1rem;
-    background: #000;
+    background: var(--greyscaletext-0);
     height: 100%;
+  }
+  .sixth-section .slide-wrapper .swiper-1 .patient-slide {
+    padding-top: 0;
+    padding-left: 0;
+  }
+  .sixth-section .swiper-slide {
+    padding-left: 4.76rem !important;
+    padding-right: 4.76rem !important;
+    padding-top: 5.57rem !important;
+    display: block;
+  }
+  .sixth-section .slide-wrapper .swiper-1 .patient-wrapper {
+    width: 100%;
+    height: unset;
+  }
+  .sixth-section .slide-wrapper .swiper-1 .patient-photo-wrapper {
+    width: 100%;
+    height: 46.66667rem;
+    display: grid;
+    place-items: center;
+  }
+  .group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .sixth-section .slide-wrapper .swiper-1 .patient-info img {
+    display: flex;
+    width: 3.684rem;
+    height: 4.61493rem;
+    padding-top: 0.8928rem;
+    padding-bottom: 0.89227rem;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+  }
+  .sixth-section .slide-wrapper .swiper-1 .patient-info .name .title,
+  .sixth-section .slide-wrapper .swiper-1 .patient-info .disease .title {
+    font-size: 4.26667rem;
+  }
+  .sixth-section .slide-wrapper .swiper-1 .patient-info .title ~ h2 {
+    font-size: 4.26667rem;
+    padding-left: 3.75rem;
+  }
+  .sixth-section .slide-wrapper .swiper-1 .stars {
+    order: 1;
+    margin-top: -20rem;
+  }
+  .sixth-section .slide-wrapper .swiper-1 .detail {
+    margin-left: 0;
+    width: 100%;
+    flex-shrink: 0;
+    border-radius: unset;
+    background: transparent;
+  }
+  .sixth-section .slide-wrapper .swiper-1 .detail p {
+    padding: 0;
+    font-size: 4.26667rem;
   }
   .sixth-section .slide-wrapper .swiper-1 .stars img {
     width: 5.2032rem;
@@ -583,17 +640,80 @@
     width: unset;
     padding-top: 6.4rem;
     height: 186.13333rem;
+    padding-bottom: 9.07rem;
+  }
+  .sixth-section .slide-wrapper .swiper-1 .patient-info {
+    margin: 5.53rem 0;
+  }
+  .button-wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sixth-section button.more {
+    margin-bottom: 2.4rem;
+    background: var(--PRIMARY-blue-700);
+    color: var(--greyscaletext-0, #fff);
+    bottom: 12.8rem;
+    margin-top: 8.53rem;
+    display: flex;
+    padding: 2.13333rem 2.13333rem 2.13333rem 6.4rem;
+    align-items: center;
+    border-radius: 6.4rem;
+    text-align: center;
+    /* WEB/SUB1/SEMI BOLD */
+    font-family: "PN Semibold";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 1.2rem */
+    letter-spacing: 0.0125rem;
+  }
+  .sixth-section button.more span {
+    font-size: 4.26667rem;
+    margin-left: 2.13rem;
+  }
+  .sixth-section button.more:hover {
+    background: var(--SECONDARY-blue-400);
+  }
+  .sixth-section button.more:active {
+    background: var(--SECONDARY-blue-500);
+  }
+  .sixth-section button.more img {
+    width: unset !important;
+    height: unset !important;
+  }
+  .patient-info .name {
+    margin-bottom: 5.53rem;
   }
   video.mobile {
     width: 100%;
-    height: 46.66667rem;
+    max-height: 100%;
     flex-shrink: 0;
+    border-radius: 1rem;
+  }
+  .paginate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .paginate img {
+    margin-right: 1.07rem;
+  }
+  .sixth-section .slide-wrapper .swiper-1 .patient-photo-wrapper img.play-btn {
+    position: absolute;
+    width: 12.8rem;
+    height: 12.8rem;
+    flex-shrink: 0;
+    display: block;
+    cursor: pointer;
   }
   .seventh-section {
     background: #edf4fb;
+    padding-top: 12.41rem !important;
     display: flex;
-    width: 23.4375rem;
-    height: 52.8125rem;
+    height: 225.33333rem;
     padding: 2.9095rem 1.03125rem 5.375rem 1.03125rem;
     flex-direction: column;
     align-items: center;
@@ -601,7 +721,8 @@
     padding-bottom: 1.63rem;
   }
   .seventh-section .content h2 {
-    font-size: 2rem;
+    font-size: 8.53333rem;
+    margin-bottom: 7.59rem;
   }
   .seventh-section .image-wrapper {
     display: none;
@@ -609,8 +730,15 @@
   .seventh-section .content {
     width: 100%;
   }
-  .seventh-section .content form .double-input .input-group {
+  .seventh-section .content form .input-group,
+  .custom-select {
     flex: unset;
+    padding: 3.2rem 5.33rem;
+  }
+  .date-wrapper img,
+  .custom-select img {
+    width: 5.33333rem;
+    height: 5.33333rem;
   }
   .seventh-section .content form .left-items {
     width: 100%;
@@ -624,17 +752,48 @@
   }
   .seventh-section .content form .right-items .button-wrapper {
     flex-direction: column;
-    gap: 0.75rem;
+    gap: unset;
+    margin-bottom: 6.93rem;
+  }
+  .seventh-section .content form .right-items .button-wrapper .bg {
+    margin-top: 6.4rem;
+    margin-bottom: 3.2rem;
+  }
+  .seventh-section .content form .right-items .button-wrapper button {
+    border: none;
   }
   .seventh-section .content form .right-items .button-wrapper button {
     flex: 1;
     width: 100%;
+    padding: 4.13333rem 0rem;
+    border-radius: 6.4rem;
+  }
+  .seventh-section .content form .right-items .button-wrapper button.bg {
+    border-radius: 6.4rem;
+  }
+  .seventh-section .content form .right-items .button-wrapper button:not(.bg) {
+    background: var(--PRIMARY-blue-100, #b6c7e0);
+  }
+  .seventh-section .content form .right-items .button-wrapper button span {
+    font-size: 4.26667rem;
   }
   .seventh-section .content form .right-items {
     gap: 1.5rem;
   }
   .seventh-section .content form .double-input {
     flex-direction: column;
+    gap: unset;
+  }
+  .seventh-section .content form .double-input .input-group:first-child {
+    margin-bottom: 4.26667rem;
+  }
+  .seventh-section .content form .input-group {
+    margin-bottom: 4.26667rem;
+  }
+  .seventh-section textarea,
+  .seventh-section input {
+    padding: 3.2rem 5.33rem;
+    font-size: 5rem;
   }
   .seventh-section .content form .input-group:has(textarea),
   .seventh-section .content form .textarea-group:has(textarea) {
@@ -644,6 +803,7 @@
     justify-content: space-between;
     align-items: flex-start;
     align-self: stretch;
+    padding: 3.2rem 5.33rem;
   }
   .eighth-section {
     height: unset;
@@ -670,6 +830,17 @@
     right: 3.2rem;
     left: 3.2rem;
     padding: unset;
+  }
+  .seventh-section .content form .input-group,
+  .seventh-section .content form .textarea-group {
+    height: 12.8rem;
+    border-radius: 6.4rem;
+  }
+  .seventh-section .content form .input-group .placeholder,
+  .seventh-section .content form .textarea-group .placeholder,
+  .seventh-section .content .custom-select span,
+  .seventh-section .content .date-wrapper span {
+    font-size: 4.26667rem;
   }
   .eighth-section .swiper-slide .infor .text p.title {
     font-size: 3.2rem;
@@ -838,6 +1009,10 @@
   footer:not(.footer-pc) .content .footer-item.about {
     margin-left: auto;
   }
+  section#features ul li {
+    width: 10rem;
+    height: 10rem;
+  }
   .blur {
     display: none;
   }
@@ -849,6 +1024,17 @@
   .fourth-section .pc .title,
   footer:not(.footer-pc) {
     display: none;
+  }
+  .group {
+    display: flex;
+    flex-direction: column;
+  }
+  .group .stars {
+    margin-top: 1.82rem;
+    margin-bottom: 1.82rem;
+  }
+  .group .name {
+    margin-bottom: 1rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
