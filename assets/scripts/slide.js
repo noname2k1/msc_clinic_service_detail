@@ -1,15 +1,28 @@
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
-
 const swiper = new Swiper('.swiper-1', {
     loop: true,
     // // If we need pagination
-    // pagination: {
-    //     el: '.swiper-pagination'
-    // },
+    on: {
+        slideChange: function () {
+            document.querySelectorAll('video').forEach((video) => {
+                if (video.played) {
+                    video.pause();
+                    video.parentNode.querySelector(
+                        '.play-btn'
+                    ).style.opacity = 1;
+                }
+            });
+        }
+    },
+    pagination: {
+        el: '.paginate.mobile',
+        clickable: true,
+        bulletClass: 'pagination-item'
+    },
     // autoplay: {
     //     delay: 2000
     // },
-
+    direction: 'horizontal',
     speed: 1000,
     // Navigation arrows
     navigation: {

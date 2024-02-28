@@ -2,6 +2,18 @@
   .first-section {
     position: static;
   }
+  .mobile.menu img {
+    transition: 0.3s linear;
+  }
+  .line-1.close {
+    transform: rotate(45deg) translateY(1rem) translateX(2rem);
+  }
+  .line-2.close {
+    opacity: 0;
+  }
+  .line-3.close {
+    transform: rotate(-45deg) translateY(-1rem) translateX(2rem);
+  }
   .first-section header.header-wrapper .search-bar img {
     width: 5.76rem;
     height: 5.76rem;
@@ -54,11 +66,11 @@
     cursor: pointer;
     order: 3;
     display: flex;
-    width: 11.73333rem;
-    height: 11.73333rem;
+    flex-direction: column;
+    width: 6.4rem;
+    height: 6.4rem;
     justify-content: center;
     align-items: center;
-    gap: 2.66667rem;
     flex-shrink: 0;
     margin-right: 2.67rem;
   }
@@ -564,11 +576,13 @@
     order: 1;
   }
   .sixth-section .slide-wrapper .swiper-1 .patient-slide {
-    flex-direction: column;
     width: 100%;
     border-radius: 1rem;
     background: var(--greyscaletext-0);
     height: 100%;
+  }
+  .sixth-section .slide-wrapper .swiper-1 .patient-slide .swiper-slide-active {
+    background: var(--greyscaletext-0);
   }
   .sixth-section .slide-wrapper .swiper-1 .patient-slide {
     padding-top: 0;
@@ -699,6 +713,8 @@
     justify-content: center;
   }
   .paginate img {
+    cursor: pointer;
+    user-select: none;
     margin-right: 1.07rem;
   }
   .sixth-section .slide-wrapper .swiper-1 .patient-photo-wrapper img.play-btn {
@@ -708,6 +724,21 @@
     flex-shrink: 0;
     display: block;
     cursor: pointer;
+    transition: 0.3s linear;
+  }
+  .view-more-3 {
+    position: absolute;
+    bottom: 8.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    height: 12.8rem;
+    padding: 2.13333rem 6.4rem;
+    align-items: center;
+    /* gap: 2.13333rem; */
+    border-radius: 6.4rem;
+    border: 1px solid var(--PRIMARY-blue-500, #134a9b);
+    background: var(--greyscaletext-0, #fff);
   }
   .seventh-section {
     background: #edf4fb;

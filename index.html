@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./assets/styles/main.css">
     <link rel="stylesheet" href="./assets/styles/service-detail.css">
     <link rel="stylesheet" href="./assets/styles/responsive.css">
+    <link rel="stylesheet" href="./assets/styles/override-lib.css">
 </head>
 
 <body>
@@ -30,7 +31,9 @@
                                 class="users-icon"></button>
                     </div>
                     <div class="mobile menu">
-                        <img src="./assets/svgs/Navigation.svg" alt="">
+                        <img class="line-1" src="./assets/svgs/line.svg" alt="">
+                        <img class="line-2" src="./assets/svgs/line.svg" alt="">
+                        <img class="line-3" src="./assets/svgs/line.svg" alt="">
                     </div>
                 </div>
                 <nav class="header-nav">
@@ -344,7 +347,7 @@
                                                 <img src="./assets/images/user.png" alt="benh-nhan">
                                                 Khách hàng:
                                             </div>
-                                            <h2>Ông Nguyễn Văn XYZ</h2>
+                                            <h2>Ông Nguyễn Văn ABC</h2>
                                         </div>
                                         <div class="disease">
                                             <div class="title">
@@ -363,6 +366,7 @@
                                     nhàng và rất vui. Giờ ra viện về nhà chú sẽ rất nhớ bác sĩ ở đây. Chú mong sẽ giúp
                                     được nhiều người ở quê chú biết đến phương pháp điều trị này...</p>
                             </div>
+                            <button class="view-more-3 mobile">Xem thêm</button>
                             <div class="button-wrapper">
                                 <button class="more text">Xem thêm</button>
                                 <button class="register text">Đăng ký thăm khám <img src="./assets/images/next.png"
@@ -411,6 +415,7 @@
                                     nhàng và rất vui. Giờ ra viện về nhà chú sẽ rất nhớ bác sĩ ở đây. Chú mong sẽ giúp
                                     được nhiều người ở quê chú biết đến phương pháp điều trị này...</p>
                             </div>
+                            <button class="view-more-3 mobile">Xem thêm</button>
                             <div class="button-wrapper">
                                 <button class="more text">Xem thêm</button>
                                 <button class="register text">Đăng ký thăm khám <img src="./assets/images/next.png"
@@ -421,10 +426,8 @@
                 </div>
             </div>
             <div class="paginate mobile">
-                <img src="./assets/svgs/current-page.svg" alt="">
-                <img src="./assets/svgs/page.svg" alt="">
-                <img src="./assets/svgs/page.svg" alt="">
-                <img src="./assets/svgs/page.svg" alt="">
+                <div class="pagination-item"></div>
+                <div class="pagination-item"></div>
             </div>
             <div class="button-wrap mobile">
                 <button class="more">
@@ -482,6 +485,7 @@
                                     <span class="mobile">Thời gian thăm khám</span>
                                     <img src="./assets/svgs/Calendar.svg" alt="">
                                 </div>
+                                <input type="date" id="date-picker" class="date-hidden" name="date-order">
                             </div>
                             <div class="input-group">
                                 <input type="text" name="friend-code">
@@ -491,10 +495,9 @@
                     </div>
                     <div class="right-items">
                         <div class="textarea-group">
-                            <textareaid="note" name="note">
-                                </textareaid=>
-                                <div class="placeholder">Ghi chú yêu cầu <span class="blur">(Không bắt buộc)</span>
-                                </div>
+                            <textarea id="note" name="note" rows="4" cols="50"></textarea>
+                            <div class="placeholder">Ghi chú yêu cầu <span class="blur">(Không bắt buộc)</span>
+                            </div>
                         </div>
                         <div class="button-wrapper">
                             <button class="bg" id="order-btn"><span>Đặt lịch ngay</span></button>

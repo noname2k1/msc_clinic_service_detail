@@ -1,0 +1,16 @@
+@media (max-width: 767px) {
+    .pagination-item {
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 0.8rem;
+        background: var(--PRIMARY-blue-100, #b6c7e0);
+        margin-right: 1.07rem;
+        cursor: pointer;
+        transition: 0.3s linear;
+        &.swiper-pagination-bullet-active {
+            width: 6.3816rem;
+            height: 1.6rem;
+            background: var(--PRIMARY-blue-300, #6186bc);
+        }
+    }
+}

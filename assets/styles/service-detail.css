@@ -653,14 +653,14 @@
   overflow: hidden;
   flex-shrink: 0;
   border-radius: 1.25rem;
-  width: 87.3125rem;
+  width: 100%;
   height: 33.6875rem;
   flex-shrink: 0;
   background: var(--SECONDARY-blue-50, #e8f8fb);
 }
 .sixth-section .slide-wrapper .swiper-1 .patient-slide {
   position: relative;
-  width: 87.3125rem;
+  width: 100%;
   height: 33.6875rem;
   flex-shrink: 0;
   display: flex;
@@ -1505,5 +1505,18 @@ button:hover span.more img.slip {
 }
 
 .date-hidden {
-  display: none !important;
+  opacity: 0;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
 }/*# sourceMappingURL=service-detail.css.map */
