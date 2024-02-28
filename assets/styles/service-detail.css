@@ -11,7 +11,6 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  gap: 0.84375rem;
   flex-shrink: 0;
   background: #fff;
   box-shadow: 0px 4px 20px 0px rgba(0, 34, 84, 0.05);
@@ -21,6 +20,7 @@
   width: 87.5rem;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 0.84375rem;
 }
 .first-section header.header-wrapper img.logo {
   width: 10.75rem;
@@ -144,6 +144,7 @@
   width: 87.5rem;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 0.84375rem;
   list-style: none;
 }
 .first-section header.header-wrapper ul.navigation li {
@@ -181,60 +182,6 @@
   font-weight: 600;
   line-height: 120%; /* 1.05rem */
   text-transform: uppercase;
-}
-@media (max-width: 767px) {
-  .first-section .search-bar {
-    order: 0;
-    display: flex;
-    width: 2.25rem !important;
-    height: 2.25rem;
-    padding: 0.45rem;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    cursor: pointer;
-  }
-  .first-section .search-bar input.search-input {
-    display: none;
-  }
-  .first-section a:has(img.logo) {
-    order: 1;
-  }
-  .first-section a:has(img.logo) img.logo {
-    width: 8.625rem;
-    height: 1.875rem;
-    flex-shrink: 0;
-  }
-  .first-section .menu-right {
-    display: none !important;
-  }
-  .first-section .menu {
-    cursor: pointer;
-    order: 3;
-    display: flex;
-    width: 1.5rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    flex-shrink: 0;
-  }
-  .first-section .menu img {
-    width: 100%;
-    height: 100%;
-  }
-  .first-section nav {
-    display: none;
-  }
-  .first-section header.header-wrapper {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    width: 100%;
-    justify-content: center;
-  }
-  .first-section header.header-wrapper .header-top {
-    width: 100%;
-  }
 }
 
 .second-section {
@@ -329,7 +276,6 @@
   padding: 6.0625rem 6.28125rem 12.75rem 6.25rem;
   flex-direction: column;
   align-items: flex-start;
-  gap: 5.5rem;
 }
 .third-section .item-1 {
   display: flex;
@@ -345,7 +291,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1.75rem;
 }
 .third-section .item-1 div p.title {
   color: var(--PRIMARY-blue-500, #134a9b);
@@ -414,7 +359,6 @@
 .third-section .item-2 div.wrapper div {
   display: flex;
   align-items: flex-start;
-  gap: 0.625rem;
 }
 .third-section .item-2 div.wrapper div p {
   width: 33.88988rem;
@@ -478,7 +422,6 @@
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.5625rem;
 }
 .fourth-section ul li {
   display: flex;
@@ -573,12 +516,10 @@
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1.5rem;
 }
 .fifth-section .text ul li {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
 }
 .fifth-section .text ul li .num-wrapper {
   position: relative;
@@ -1231,6 +1172,7 @@
 .eighth-section .swiper-slide img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   transition: transform 0.2s linear;
 }
 .eighth-section .swiper-slide:hover > img {
@@ -1280,7 +1222,6 @@
   font-weight: 700;
   line-height: 120%; /* 1.5rem */
   letter-spacing: -0.0125rem;
-  max-width: 13.25rem;
 }
 .eighth-section .swiper-slide .infor button {
   width: 2rem;
@@ -1305,13 +1246,13 @@
   transition: transform 0.2s linear, opacity 0.2s linear;
 }
 .eighth-section .swiper-slide .infor button.more img:not(.slip) {
-  transform: translateX(-2rem);
+  transform: translateX(-4rem);
 }
 .eighth-section .swiper-slide:hover button.more img:not(.slip) {
   transform: translateX(0);
 }
 .eighth-section .swiper-slide:hover button.more img.slip {
-  transform: translateX(2rem);
+  transform: translateX(4rem);
 }
 
 footer.footer-pc {
@@ -1506,8 +1447,8 @@ section#features ul li img {
 button span.more {
   overflow: hidden;
   position: relative;
-  width: 2rem;
-  height: 2rem;
+  width: 8.53333rem;
+  height: 8.53333rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1524,18 +1465,18 @@ button span.more.white {
 }
 button span.more img {
   position: absolute;
-  width: 0.25931rem;
-  height: 0.51863rem;
+  width: 1.1064rem;
+  height: 2.2128rem;
   transition: transform 0.2s linear, opacity 0.2s linear;
 }
 button span.more img:not(.slip) {
-  transform: translateX(-2rem);
+  transform: translateX(-500%);
 }
 button:hover span.more img:not(.slip) {
   transform: translateX(0);
 }
 button:hover span.more img.slip {
-  transform: translateX(2rem);
+  transform: translateX(500%);
 }
 
 .date-wrapper img,

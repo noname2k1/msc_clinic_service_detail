@@ -47,7 +47,7 @@ options.forEach(
 
 const button = document.getElementById('view-more');
 button.onclick = function (e) {
-    e.target.closest('ul').style.height = 'unset';
+    e.target.closest('ul').style.maxHeight = 'unset';
     e.target.closest('ul').style.overflow = 'visible';
     button.style.display = 'none';
     e.target.closest('ul').querySelector('.overlay').style.display = 'none';

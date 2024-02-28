@@ -27,6 +27,15 @@ html {
     }
 }
 
+
+@media (max-width:767px) {
+    .container {
+        width: 100%;
+    }
+}
+
+
+
 .d-none {
     display: none;
 }
@@ -96,15 +105,15 @@ button {
         display: block;
     }
 
-    section:not(#features) {
-        max-width: 23.4375rem;
+
+    section {
+        max-width: 100%;
         overflow: hidden;
     }
 
     section:not(#features):not(.second-section):not(.first-section) {
-        padding-top: 1.65rem !important;
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
+        padding-left: 4.27rem !important;
+        padding-right: 4.27rem !important;
         overflow: hidden;
     }
 
