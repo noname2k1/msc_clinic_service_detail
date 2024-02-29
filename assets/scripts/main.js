@@ -27,14 +27,23 @@ elements.forEach((element) => {
     };
 });
 
+// custom select handler
 const customSelects = document.querySelectorAll('.custom-select');
-customSelects.forEach(
-    (select) =>
-        (select.onclick = function () {
-            const ul = select.querySelector('ul.list');
-            ul.style.display = 'block';
-        })
-);
+
+// close all ul showing
+const hideAllUL = () => {
+    customSelects.forEach(
+        (select) => (select.querySelector('ul.list').style.display = 'none')
+    );
+};
+customSelects.forEach((select) => {
+    select.onclick = function () {
+        hideAllUL();
+        // show target ul
+        const ul = select.querySelector('ul.list');
+        ul.style.display = 'block';
+    };
+});
 
 const options = document.querySelectorAll('.custom-select ul li');
 options.forEach(
@@ -113,10 +122,100 @@ mm.add('(min-width: 768px)', () => {
     });
 });
 
-var box1 = document.querySelector('.fourth-section .overlay');
-let targets = gsap.utils.toArray('.scroll-with-effect li');
+// const box1 = document.querySelector('.fourth-section .overlay');
+// let targets = gsap.utils.toArray('.scroll-with-effect li');
 
-// validate input required
+// play video of slideshow
+const playbtns = document.querySelectorAll('.play-btn');
+playbtns.forEach((element) => {
+    element.onclick = function () {
+        const video = element.parentNode.querySelector('video');
+        if (video.paused) {
+            video.play();
+            element.style.opacity = 0;
+        } else {
+            video.pause();
+            element.style.opacity = 1;
+        }
+    };
+});
+
+// menu btn mobile effect
+document.querySelector('.mobile.menu').onclick = function (e) {
+    // console.log(e.target.closest('.mobile.menu'));
+    e.target
+        .closest('.mobile.menu')
+        .querySelector('.menu .line-1')
+        .classList.toggle('close');
+    e.target
+        .closest('.mobile.menu')
+        .querySelector('.menu .line-2')
+        .classList.toggle('close');
+    e.target
+        .closest('.mobile.menu')
+        .querySelector('.menu .line-3')
+        .classList.toggle('close');
+};
+
+// show value of input date (custom)
+document.querySelector('#date-picker').oninput = function (e) {
+    const date = new Date(e.target.value);
+    const timeSpans = document
+        .querySelector('.date-wrapper')
+        .querySelectorAll('span');
+    timeSpans.forEach((spanElement) => {
+        if (!date.getDate() || !date.getMonth() || !date.getFullYear()) {
+            const today = new Date();
+            // console.log(today);
+            spanElement.textContent = `${today.getDate()}/${
+                today.getMonth() + 1
+            }/${today.getFullYear()}`;
+            return;
+        }
+        spanElement.textContent = `${date.getDate()}/${
+            date.getMonth() + 1
+        }/${date.getFullYear()}`;
+    });
+};
+
+// scrolllock when modal showed
+
+const body = document.querySelector('body');
+const modal = document.querySelector('.modal-container');
+let initialScrollPosition;
+
+function showModal() {
+    // Lưu vị trí cuộn hiện tại
+    initialScrollPosition = window.scrollY;
+
+    // Thêm lớp CSS hoặc thuộc tính khóa cuộn
+    body.style.overflow = 'hidden';
+}
+
+function hideModal() {
+    // Phục hồi vị trí cuộn ban đầu
+    window.scrollTo(0, initialScrollPosition);
+
+    // Xóa lớp CSS hoặc thuộc tính khóa cuộn
+    body.style.overflow = '';
+}
+
+// show video modal
+document.querySelector('.play-image').onclick = function () {
+    modal.classList.remove('d-none');
+    showModal();
+};
+
+// hide video modal
+modal.onclick = function (e) {
+    if (e.target && e.target.nodeName != 'VIDEO') {
+        // console.dir(e.target);
+        this.classList.add('d-none');
+        hideModal();
+    }
+};
+
+// validate input required - ongoing...
 const orderBtn = document.querySelector('#order-btn');
 orderBtn.onclick = function (e) {
     e.preventDefault();
@@ -133,34 +232,4 @@ orderBtn.onclick = function (e) {
             break;
         }
     }
-};
-
-const playbtns = document.querySelectorAll('.play-btn');
-playbtns.forEach((element) => {
-    element.onclick = function () {
-        const video = element.parentNode.querySelector('video');
-        if (video.paused) {
-            video.play();
-            element.style.opacity = 0;
-        } else {
-            video.pause();
-            element.style.opacity = 1;
-        }
-    };
-});
-
-document.querySelector('.mobile.menu').onclick = function (e) {
-    // console.log(e.target.closest('.mobile.menu'));
-    e.target
-        .closest('.mobile.menu')
-        .querySelector('.menu .line-1')
-        .classList.toggle('close');
-    e.target
-        .closest('.mobile.menu')
-        .querySelector('.menu .line-2')
-        .classList.toggle('close');
-    e.target
-        .closest('.mobile.menu')
-        .querySelector('.menu .line-3')
-        .classList.toggle('close');
 };

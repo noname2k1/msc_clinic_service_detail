@@ -902,6 +902,12 @@
         }
         &:not(.bg) {
             background: var(--PRIMARY-blue-100, #b6c7e0);
+            &:hover {
+                background: var(--SECONDARY-blue-400);
+            }
+            &:active {
+                background: var(--SECONDARY-blue-500);
+            }
         }
         border-radius: 6.4rem;
     }

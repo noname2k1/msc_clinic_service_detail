@@ -805,6 +805,12 @@
   .seventh-section .content form .right-items .button-wrapper button:not(.bg) {
     background: var(--PRIMARY-blue-100, #b6c7e0);
   }
+  .seventh-section .content form .right-items .button-wrapper button:not(.bg):hover {
+    background: var(--SECONDARY-blue-400);
+  }
+  .seventh-section .content form .right-items .button-wrapper button:not(.bg):active {
+    background: var(--SECONDARY-blue-500);
+  }
   .seventh-section .content form .right-items .button-wrapper button span {
     font-size: 4.26667rem;
   }

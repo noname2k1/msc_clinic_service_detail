@@ -4,14 +4,16 @@ const swiper = new Swiper('.swiper-1', {
     // // If we need pagination
     on: {
         slideChange: function () {
-            document.querySelectorAll('video').forEach((video) => {
-                if (video.played) {
-                    video.pause();
-                    video.parentNode.querySelector(
-                        '.play-btn'
-                    ).style.opacity = 1;
-                }
-            });
+            document
+                .querySelectorAll('.sixth-section video')
+                .forEach((video) => {
+                    if (video.played) {
+                        video.pause();
+                        video.parentNode.querySelector(
+                            '.play-btn'
+                        ).style.opacity = 1;
+                    }
+                });
         }
     },
     pagination: {
@@ -19,9 +21,9 @@ const swiper = new Swiper('.swiper-1', {
         clickable: true,
         bulletClass: 'pagination-item'
     },
-    // autoplay: {
-    //     delay: 2000
-    // },
+    autoplay: {
+        delay: 2000
+    },
     direction: 'horizontal',
     speed: 1000,
     // Navigation arrows
@@ -30,11 +32,6 @@ const swiper = new Swiper('.swiper-1', {
         nextEl: '.next-btn-1'
     },
     slidesPerView: 1
-
-    // And if we need scrollbar
-    // scrollbar: {
-    //     el: '.swiper-scrollbar'
-    // }
 });
 
 const swiper2 = new Swiper('.mySwiper', {
@@ -60,6 +57,10 @@ const swiper2 = new Swiper('.mySwiper', {
             spaceBetween: 10
         },
         1024: {
+            slidesPerView: 4,
+            spaceBetween: 10
+        },
+        1600: {
             slidesPerView: 4,
             spaceBetween: 10
         }

@@ -37,17 +37,17 @@ html {
 
 
 .d-none {
-    display: none;
+    display: none !important;
 }
 
 .d-flex {
-    display: flex;
+    display: flex !important;
     align-items: center;
 }
 
 
 .d-block {
-    display: block;
+    display: block !important;
 }
 
 :root {
@@ -127,7 +127,12 @@ button {
         padding-right: 0 !important;
         padding-left: 0 !important;
     }
+
+    .large {
+        display: none !important;
+    }
 }
+
 
 @media (min-width: 768px) and (max-width:1023px) {
     .mobile {
@@ -143,6 +148,9 @@ button {
         display: none !important
     }
 
+    .large {
+        display: none !important;
+    }
 
 }
 
@@ -159,5 +167,7 @@ button {
     .fifth-section button.more {
         display: none !important
     }
+
+
 
 }
